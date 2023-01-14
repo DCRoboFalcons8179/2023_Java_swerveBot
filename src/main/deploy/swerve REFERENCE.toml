@@ -1,0 +1,105 @@
+# This is the configuration file for SwerveLibrary. See the README for more in-depth information
+# about how to fill this out.
+
+[gyro]
+template = "navx" # The type of gyro being used.
+port-type = "I2C" # The type of port the navx is plugged into.
+port = "kMXP" # The name of the port, as passed into the navx constructor.
+
+[[modules]]
+template = "team88.diff-swerve-2021.beta" # The template for the module.
+location-inches = { x = 9.375, y = 5.6875 } # The location of the module.
+motors.lo.can-id = 9 # The CAN ID of the first motor.
+motors.hi.can-id = 5 # The CAN ID of the second motor.
+azimuth-sensor.can-id = 10 # The CAN ID of the CANCoder.
+azimuth-sensor.offset = 42.7 # The degrees to subtract from the read module angle.
+
+azimuth-controller.kP = 10.0
+# azimuth-controller.kI = 0.0
+azimuth-controller.kD = 0.0
+# azimuth-controller.kF = 0.0
+# azimuth-controller.i-zone = 0.0
+# azimuth-controller.i-max = 0.0
+# azimuth-controller.max-speed = 0.0
+# azimuth-controller.max-acceleration = 0.0
+
+wheel-controller.kP = 0.5
+wheel-controller.kI = 0.0
+wheel-controller.kD = 0.0
+# wheel-controller.i-zone = 0.0
+# wheel-controller.i-max = 0.0
+
+[[modules]]
+template = "team88.diff-swerve-2021.beta" # The template for the module.
+location-inches = { x = -9.375, y = 5.6875 } # The location of the module.
+motors.lo.can-id = 7 # The CAN ID of the first motor.
+motors.hi.can-id = 3 # The CAN ID of the second motor.
+azimuth-sensor.can-id = 13 # The CAN ID of the CANCoder.
+azimuth-sensor.offset = 132.6 # The degrees to subtract from the read module angle.
+azimuth-sensor.inverted = true
+
+azimuth-controller.kP = 10.0
+# azimuth-controller.kI = 0.0
+azimuth-controller.kD = 0.0
+# azimuth-controller.kF = 0.0
+# azimuth-controller.i-zone = 0.0
+# azimuth-controller.i-max = 0.0
+# azimuth-controller.max-speed = 0.0
+# azimuth-controller.max-acceleration = 0.0
+
+wheel-controller.kP = 0.5
+wheel-controller.kI = 0.0
+wheel-controller.kD = 0.0
+# wheel-controller.i-zone = 0.0
+# wheel-controller.i-max = 0.0
+
+
+
+[[modules]]
+template = "team88.diff-swerve-2021.beta" # The template for the module.
+location-inches = { x = -9.375, y = -5.6875 } # The location of the module.
+motors.lo.can-id = 6 # The CAN ID of the first motor.
+motors.hi.can-id = 8 # The CAN ID of the second motor.
+azimuth-sensor.can-id = 11 # The CAN ID of the CANCoder.
+azimuth-sensor.offset = 42.0 # The degrees to subtract from the read module angle.
+azimuth-sensor.inverted = true
+
+azimuth-controller.kP = 10.0
+# azimuth-controller.kI = 0.0
+azimuth-controller.kD = 0.0
+# azimuth-controller.kF = 0.0
+# azimuth-controller.i-zone = 0.0
+# azimuth-controller.i-max = 0.0
+# azimuth-controller.max-speed = 0.0
+# azimuth-controller.max-acceleration = 0.0
+
+wheel-controller.kP = 0.5
+wheel-controller.kI = 0.0
+wheel-controller.kD = 0.0
+# wheel-controller.i-zone = 0.0
+# wheel-controller.i-max = 0.0
+
+[[modules]]
+template = "team88.diff-swerve-2021.beta" # The template for the module.
+location-inches = { x = 9.375, y = -5.6875 } # The location of the module.
+motors.lo.can-id = 4 # The CAN ID of the first motor.
+motors.hi.can-id = 2 # The CAN ID of the second motor.
+azimuth-sensor.can-id = 12 # The CAN ID of the CANCoder.
+azimuth-sensor.offset = 131.22 # The degrees to subtract from the read module angle.
+
+azimuth-controller.kP = 10.0
+# azimuth-controller.kI = 0.0
+azimuth-controller.kD = 0.0
+# azimuth-controller.kF = 0.0
+# azimuth-controller.i-zone = 0.0
+# azimuth-controller.i-max = 0.0
+# azimuth-controller.max-speed = 0.0
+# azimuth-controller.max-acceleration = 0.0
+
+wheel-controller.kP = 0.5
+wheel-controller.kI = 0.0
+wheel-controller.kD = 0.0
+# wheel-controller.i-zone = 0.0
+# wheel-controller.i-max = 0.0
+
+
