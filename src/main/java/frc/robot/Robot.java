@@ -5,9 +5,15 @@
 
 package frc.robot;
 
+import com.kauailabs.navx.frc.AHRS;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.I2C.Port;
 import frc.robot.subsystems.swerve.swerveTranslator;
+import frc.team88.swerve.SwerveController;
+import frc.team88.swerve.gyro.NavX;
+import frc.team88.swerve.gyro.SwerveGyro;
 
 /**
  * Robot using Team 88's SwerveLibrary, using the TimedRobot framework without command-based
@@ -24,7 +30,8 @@ public class Robot extends TimedRobot {
 
 
   // The xBox gamepad.
-  private Joystick gamepad;
+  private Joystick gamepad = new Joystick(0);
+
 
 
 
@@ -33,6 +40,14 @@ public class Robot extends TimedRobot {
 
 
     gamepad = new Joystick(k.GAMEPAD_PORT);
+
+    AHRS navx = new AHRS(Port.kMXP);
+
+    SwerveGyro swerveGyro = new NavX();
+
+    SwerveController swerveController = new SwerveController("swerve.toml", swerveGyro);
+
+
   }
 
   @Override
