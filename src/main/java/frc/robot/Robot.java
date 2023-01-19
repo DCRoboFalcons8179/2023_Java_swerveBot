@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import frc.team88.swerve.SwerveController;
 
 /**
- * Robot using Team 88's SwerveLibrary, using the TimedRobot framework without command-based
+ * Robot using Team 88's Swerv eLibrary, using the TimedRobot framework without command-based
  * programming. The controller in use is an XBox controller, with the following mapping:
  *
  * <p>Left stick - Steer the direction of translation. Does not set speed. Right trigger - Sets the
